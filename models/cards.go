@@ -18,4 +18,5 @@ type Card struct {
 	StartTime  time.Time `gorm:"not null"`
 	EndTime    *time.Time
 	Users      []User `gorm:"many2many:user_cards;joinForeignKey:CardID;joinReferences:UserID"`
+	Items []Item `gorm:"many2many:card_items;joinForeignKey:CardID;joinReferences:ItemID"`
 }
