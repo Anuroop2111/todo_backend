@@ -17,7 +17,7 @@ func ConnectDB() {
 		panic("Could not connect to mysql database")
 	}
 
-	err = DB.AutoMigrate(&models.User{}, &models.Card{}, &models.Item{}, &models.UserCard{})
+	err = DB.AutoMigrate(&models.User{}, &models.Card{}, &models.Item{}, &models.UserCard{}, &models.CardItem{})
 	if err != nil {
 		panic("Failed to auto-migrate user table")
 	}
